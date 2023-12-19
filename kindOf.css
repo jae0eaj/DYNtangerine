@@ -1,0 +1,918 @@
+body{
+    /* width: 100vw;
+    height: 100vh; */
+    background-color: #e5c696;
+    background-attachment: fixed;
+
+    /* overflow-x: hidden; */
+    position: absolute;
+    /* left: 0px; */
+}
+
+
+
+
+
+
+
+@font-face {
+    font-family: 'ChosunKg';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunKg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MaplestoryOTFBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TmoneyRoundWindExtraBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindExtraBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400, 500, 600, 700;
+    font-style: normal;
+}
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+html{
+    font-size: 10px;
+    overflow-x: hidden;
+}
+
+
+#cover{
+    display: flex;
+    overflow: hidden;
+}
+
+.row{
+    width: 100vw;
+    display: flex;
+    overflow: hidden;
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* background-color: greenyellow; margin: 1rem; */
+/* background-color: greenyellow; */
+/* margin: 1rem; */
+.col4{width: 100%;}
+.col3{width: 75%; }
+.col2{width: 50%; }
+.col1{width: 25%; }
+
+.h50{height: 5rem;}
+.h100{height: 10rem;}
+.h150{height: 15rem;}
+.h200{height: 20rem;}
+.h500{height: 50rem;}
+.h700{height: 70rem;}
+.h700_origin{height: 75rem;}
+.h700_origin_2{height: 92rem;}
+
+.h750_kindOf{height: 75rem;}
+
+.h700_effect{height: 70rem; }
+.h1000{height: 100rem;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 다시 만든 뒤로가기 아이콘 */
+.back{
+    width: 7rem;
+    height: 7rem;
+    /* background-color: aqua; */
+    z-index: 300;
+
+    position: fixed;
+
+    bottom: 5rem;
+    right: 17rem;
+    /* left: 17rem; */
+    /* 여기서 left로만 바꾸면 다시 왼쪽으로 감 */
+}
+
+.backBack{
+    width: 5rem;
+    height: 5rem;
+
+    /* 글라스모피즘 스타일 */
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(71, 64, 15, 0.37);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 100px;
+    border: 1.5px solid rgba( 255, 255, 255, 0.2 );
+
+    /* 비디오 아이콘 이미지 */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(img/backBack.png);
+    z-index: 10;
+}
+
+.backBack:hover{
+    transform: scale( 1.05 );
+    transition-duration: 0.3s;  
+}
+/* 다시 만든 뒤로가기 아이콘 */
+
+
+
+/* 새로만든 최상단 가기 아이콘 */
+.moveTopBtn {
+    width: 7rem;
+    height: 7rem;
+    background-color: red;
+
+    position: fixed;
+
+
+
+    bottom: 5rem;
+    right: 8rem;
+
+    z-index: 400;
+
+    /* 글라스모피즘 스타일 */
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(71, 64, 15, 0.37);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 100px;
+    border: 1.5px solid rgba( 255, 255, 255, 0.2 );
+
+}
+/* 새로만든 최상단 가기 호버 애니메이션 */
+.moveTopBtn:hover{    
+    transform: scale( 1.05 );
+    transition-duration: 0.3s;  
+}
+
+
+
+/* 귤 종류 본문 로고 */
+#kindOfLogo{
+    width: 30rem;
+    height: 30rem;
+
+    /* background-color: palevioletred; */
+    background-image: url(img/kindOfLogo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+
+
+
+
+
+/* swiper 방식 귤슬라이더 */
+.swiper {
+    width: 50rem;
+    height: 50rem;
+    /* background-color: orangered; */
+}
+
+
+.swiper-slide {
+    /* text-align: center;
+    font-size: 18px;
+    background: #fff; */
+
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+
+.swiper-slide img {
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+}
+/* swiper 방식 귤슬라이더 */
+
+
+
+
+
+/* swiper 이미지 */
+#swiperImg_1{
+    background-image: url(img/img01.png);
+    width: 50h;
+    height: 50vh;
+    background-repeat:no-repeat;
+    background-size: contain;
+}
+#swiperImg_2{
+    background-image: url(img/img02.png);
+    width: 50h;
+    height: 50vh;
+    background-repeat:no-repeat;
+    background-size: contain;
+}
+#swiperImg_3{
+    background-image: url(img/img03.png);
+    width: 50h;
+    height: 50vh;
+    background-repeat:no-repeat;
+    background-size: contain;
+}
+#swiperImg_4{
+    background-image: url(img/img04.png);
+    width: 50h;
+    height: 50vh;
+    background-repeat:no-repeat;
+    background-size: contain;
+}
+#swiperImg_5{
+    background-image: url(img/img05.png);
+    width: 50h;
+    height: 50vh;
+    background-repeat:no-repeat;
+    background-size: contain;
+}
+#swiperImg_6{
+    background-image: url(img/img06.png);
+    width: 50h;
+    height: 50vh;
+    background-repeat:no-repeat;
+    background-size: contain;
+}
+#swiperImg_7{
+    background-image: url(img/img07.png);
+    width: 50h;
+    height: 50vh;
+    background-repeat:no-repeat;
+    background-size: contain;
+}
+#swiperImg_8{
+    background-image: url(img/img08.png);
+    width: 50h;
+    height: 50vh;
+    background-repeat:no-repeat;
+    background-size: contain;
+}
+/* swiper 이미지 */
+
+
+
+
+
+/* swiper 왼 오 손잡이 */
+.swiper-button-prev{
+    /* background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(71, 64, 15, 0.37);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 100px;
+    border: 1.5px solid rgba( 255, 255, 255, 0.2 ); */
+
+    /* background-image: url(img/leftArrow.png);
+    background-size: contain;
+    background-repeat: no-repeat; */
+
+    /* padding: 0.1rem 1rem;
+    border-radius: 100rem; */
+
+    background-image: url(img/swiperArrow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    /* color: #ffffff !important;
+    margin-left: 10rem; */
+
+    
+    
+    
+    
+    /* font-size: 2.5rem;
+    font-family: 'TmoneyRoundWindExtraBold';
+    font-weight: normal;
+    font-style: normal;
+    text-align: center; */
+
+
+    margin-left: 3rem;
+
+}
+
+.swiper-button-next{
+    /* background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(71, 64, 15, 0.37);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 100px;
+    border: 1.5px solid rgba( 255, 255, 255, 0.2 ); */
+
+    /* background-image: url(img/leftArrow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: scale(-1); */
+
+    /* padding: 0.1rem 1rem;
+    border-radius: 100rem; */
+    
+    /* 
+    color: #ffffff !important;
+    margin-right: 10rem; */
+
+    /* font-size: 2.5rem;
+    font-family: 'TmoneyRoundWindExtraBold';
+    font-weight: normal;
+    font-style: normal;
+    text-align: center; */
+
+
+
+    background-image: url(img/swiperArrow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: scale(-1);
+
+
+    margin-right: 3rem;
+}
+
+
+
+
+.swiper-button-next::after,
+.swiper-button-prev::after 
+{
+display:none;
+}
+
+
+
+
+/* swiper 페이지네이션 */
+.swiper-pagination{
+    /* background-color: blue; */
+    padding-bottom: 5rem;
+
+}
+
+.swiper-pagination-bullet{
+    background: #fcb31d !important;
+}
+
+#outterCatonBox
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: green; */
+}
+
+
+
+
+
+
+
+
+/* 웹용 상자 이미지 */
+#innerCatonBoxForWeb{
+    /* background-image: url(img/innerCatonBox.png);
+    background-size: 200rem;
+    background-repeat: no-repeat; */
+
+    width: 100rem;
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+/* 모바일용 상자 이미지 사라지게 */
+#innerCatonBoxForMob{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 귤 종류 부가설명 흘러가는 글자 */
+#container{
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+
+    
+    width: 100vw;
+    height: 2vmax;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+
+    /* background-color: red; */
+}
+.box{
+    width: 100%;
+    height: 3vmax;
+    /* background-color: royalblue; */
+
+    display: flex;
+
+    background-image: url(img/tape.png);
+    background-repeat: repeat-x;
+    background-size: contain;
+}
+.myText1{
+    position: absolute;
+    width: 100%;
+    color: white;
+
+    font-size: 0.8vmax;
+    font-family: 'Pretendard-Regular';
+    font-weight: 500;
+}
+.myText2{
+    position: absolute;
+    width: 100%;
+    left: 100%;
+    color: white;
+
+    font-size: 0.8vmax;
+    font-family: 'Pretendard-Regular';
+    font-weight: 500;
+}
+.myText1 p{ 
+    width: 100%;
+    padding: 1rem 0rem;
+}
+.myText2 p{ 
+    width: 100%;
+    padding: 1rem 0rem;
+}
+.textAniA{
+    animation: moveLeft 25s linear 0s infinite;
+}
+@keyframes moveLeft{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+/* 귤 종류 부가설명 흘러가는 글자 */
+
+
+
+
+
+
+/* !!아이패드!! */
+@media all and (max-width:1200px)
+{
+
+    .row{
+        height: 100%;
+        flex-direction: column; /* 옆으로 가는게 아닌 아래로 이동하게 만드려고 한 코드 */
+        align-items: center;
+        /* 화면이 작아지니 줄 사이 간격을 늘리기 위한 코드 */
+        /* padding: 2rem 0;  */
+
+    }
+
+    /* background-color: violet; */ 
+    /* margin: 1rem; */
+    .col4{width: 100%;}
+    .col3{width: 100%;}
+    .col2{width: 100%;}
+    .col1{width: 100%;}
+
+    .h150{height: 15rem;}
+    .h700_effect{height: 65rem;}
+
+
+
+
+
+    /* 최상단 아이콘 사라지게 (아이패드) */
+    .moveTopBtn{
+        display: none;
+    }
+
+
+
+    /* 새로만든 흘러가는 부가설명 사라지게 (아이폰) */
+    .marquee{
+        display: none;
+    }
+
+
+    /* 웹용 비디오 아이콘 사라지게 (아이패드)*/
+    .videoForWeb{
+        display: none;
+    }
+
+    /* 다시 만든 비디오 아이콘 (아이패드)(크기조정) */
+    .video{
+        display: initial;
+
+        width: 8rem;
+        height: 8rem;
+    
+        bottom: 5rem;
+        right: 5rem;
+    }
+    /* 다시 만든 비디오 아이콘 (아이패드)(크기조정) */
+
+    #videoVideo{
+        width: 8rem;
+        height: 8rem;
+    }
+
+
+
+
+
+
+    /* 다시 만든 뒤로가기 아이콘 (아이패드)(크기조정) */
+    .back{
+        width: 8rem;
+        height: 8rem;
+    
+        bottom: 5rem;
+        right: 5rem;
+    }
+    .backBack{
+        width: 8rem;
+        height: 8rem;
+    }
+    /* 다시 만든 뒤로가기 아이콘 (아이패드)(크기조정) */
+
+
+
+
+
+
+
+
+    /* 웹용 상자 이미지 사라지게*/
+    #innerCatonBoxForWeb{
+        display: block;
+    }
+
+    /* swiper 페이지네이션 (아이패드용)*/
+    .swiper-pagination{
+        /* background-color: blue; */
+        padding-bottom: 6rem;  
+    }
+
+
+
+
+
+    /* 스와이퍼 마진 사라지게 */
+    #swiperMargin_1{
+        display: none;
+    }
+    #swiperMargin_2{
+        display: none;
+    }
+
+    
+
+
+
+
+    /* 아이패드 swiper 왼 오 손잡이 */
+    .swiper-button-prev{
+        margin-left: 20rem;
+    }
+    .swiper-button-next{
+        margin-right: 20rem;
+    }
+
+
+
+
+
+    /* 1024px에서 마우스 제거 */
+    #mouse{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* !!아이폰!! */
+@media all and (max-width:640px)
+{
+    html{
+        font-size: 10px;
+    }
+
+
+    .row{
+        height: 100%;
+        flex-direction: column; /* 옆으로 가는게 아닌 아래로 이동하게 만드려고 한 코드 */
+        align-items: center;
+        padding: 2rem 0; 
+        /* 화면이 작아지니 줄 사이 간격을 늘리기 위한 코드 */
+        /* padding: 2rem 0;  */
+    }
+
+    /* background-color: orange; */ 
+    /*  margin: 1rem; */
+    .col4{width: 100%;}
+    .col3{width: 100%;}
+    .col2{width: 100%;}
+    .col1{width: 100%;}
+
+    .h150{height: 10rem;}
+
+    .h200{height: 13rem; }
+
+
+    .h700_effect{height: 65rem;}
+
+    .h700_origin{height: 90rem;}
+
+    .h750_kindOf{height: 55rem;}
+
+    .h700_origin_2{height: 95rem;}
+
+    .h500{height: 28rem; }
+
+
+    #margin{
+        display: none;
+    }
+
+    
+
+    /* 새로만든 흘러가는 부가설명 사라지게 (아이폰) */
+    .marquee{
+        display: none;
+    }
+
+
+    /* 최상단 아이콘 사라지게 (아이폰) */
+    .moveTopBtn{
+        display: none;
+    }
+
+
+
+    
+
+
+    /* 다시 만든 뒤로가기 아이콘 (아이폰)(크기조정) */
+    .back{
+        width: 4.5rem;
+        height: 4.5rem;
+    
+        bottom: 2rem;
+        right: 2rem;
+    }
+    .backBack{
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+    /* 다시 만든 뒤로가기 아이콘 (아이폰)(크기조정) */
+
+
+
+
+
+    /* 본문 제목 로고 사이즈 줄이기 (아이폰) */
+    /* 귤 종류 본문 로고 */
+    #kindOfLogo{
+        width: 26rem;
+        height: 26rem;
+
+        margin-top: 0rem;
+    }
+
+
+
+
+
+
+
+    /* 아이패드용 상자 이미지 사라지게*/
+    #innerCatonBoxForWeb{
+        display: none;
+    }
+    /* 아이폰용 상자 이미지 */
+    #innerCatonBoxForMob{
+        display: block;
+        width: 60rem;
+        
+        position: absolute;
+        
+
+        transform: rotate(90deg);
+
+    }
+
+
+
+    /* 아이폰 */
+    .swiper {
+        width: 40rem;
+        height: 60rem;
+
+
+        margin-top: 12rem;
+        left: 50%;
+        transform: translate(-50%);
+        /* background-color: orangered; */
+    }
+
+
+
+
+    
+    /* 스와이퍼 마진 사라지게 */
+    #swiperMargin_1{
+        display: none;
+    }
+    #swiperMargin_2{
+        display: none;
+    }
+
+
+
+
+        
+    /* swiper 이미지 */
+    #swiperImg_1{
+        background-image: url(img/1.png);
+    }
+    #swiperImg_2{
+        background-image: url(img/2.png);
+    }
+    #swiperImg_3{
+        background-image: url(img/3.png);
+    }
+    #swiperImg_4{
+        background-image: url(img/4.png);
+    }
+    #swiperImg_5{
+        background-image: url(img/5.png);
+    }
+    #swiperImg_6{
+        background-image: url(img/6.png);
+    }
+    #swiperImg_7{
+        background-image: url(img/7.png);
+    }
+    #swiperImg_8{
+        background-image: url(img/8.png);
+    }
+    /* swiper 이미지 */
+
+
+
+
+
+
+
+    /* 아이폰 swiper 왼 오 손잡이 */
+    .swiper-button-prev{
+        margin-left: 0.5rem;
+    }
+    .swiper-button-next{
+        margin-right: 0.5rem;
+    }
+
+    /* 아이폰 swiper 페이지네이션  */
+    .swiper-pagination{
+        padding-bottom: 3.6rem;
+    }
+
+
+
+
+
+
+    /* 흘러가는 글자 (아이폰)*/
+    #container{
+        display: none;
+    }
+    /* 흘러가는 글자 (아이폰)*/
+
+
+
+
+
+
+
+
+
+
+
+    /* 640px에서 마우스 제거 */
+    #mouse{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* mouse */
+#mouse{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 700;
+    pointer-events: none;
+}
+
+#mouse img{
+    width: 6rem;
+}
